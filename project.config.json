@@ -37,7 +37,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.10.2",
   "appid": "wx6abde49637d087b9",
-  "projectname": "RC-Car",
+  "projectname": "RC-Car-WechatApp",
   "debugOptions": {
     "hidedInDevtools": []
   },
