@@ -1,0 +1,24 @@
+<view class='coupon-window {{window==true?"on":""}}'>
+   <view class='couponWinList'>
+      <view class='item acea-row row-center-wrapper' wx:for="{{couponList}}" wx:key='index'>
+         <view class='money font-color acea-row row-column row-center-wrapper'>
+            <view>￥<text class='num'>{{item.coupon_price}}</text></view>
+            <view class="pic-num">满{{item.use_min_price}}元可用</view>
+         </view>
+         <view class="text acea-row row-between">
+            <view class='pic acea-row row-column row-center'>
+               <view class='name line1'>{{item.title}}</view>
+               <view>{{item.start_time ? item.start_time+'-' : ''}}{{item.end_time}}</view>
+            </view>
+            <view class="type" wx:if="{{item.type===0}}">通用劵</view>
+            <view class="type" wx:elif="{{item.type===1}}">品类券</view>
+            <view class="type" wx:else>商品券</view>
+         </view>
+      </view>
+   </view>
+   <view class='lid'>
+      <navigator hover-class='none' url='/pages/user_get_coupon/index' class='bnt font-color'>立即领取</navigator>
+      <view class='iconfont icon-guanbi3' bindtap='close'></view>
+   </view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{window==false}}'></view>
